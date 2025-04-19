@@ -1,8 +1,24 @@
+---
+title: "Email Classification and PII Masking"
+emoji: "📧"
+colorFrom: blue
+colorTo: green
+sdk: docker
+sdk_version: "1.0"
+app_file: app.py
+pinned: false
+---
+
 # Email Classification API
 
-Classifies incoming support emails and masks any personal information (PII) using regex. Deployed with FastAPI.
+📧 Classifies support emails and masks any personally identifiable information (PII) using regex.  
+🚀 Deployed using FastAPI & Docker on Hugging Face Spaces.
 
-## Setup
+---
+
+## 🔧 Setup Instructions
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt

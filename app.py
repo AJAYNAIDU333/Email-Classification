@@ -1,5 +1,13 @@
-import uvicorn
-from api import app
+from fastapi import FastAPI
+from models import classify_email
 
-if __name__ == "__main__":
-    uvicorn.run("api:app", host="0.0.0.0", port=7860)
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the email classification API!"}
+
+@app.post("/classify/")
+def classify(email_body: str):
+    result = classify_email(email_body)
+    return result
